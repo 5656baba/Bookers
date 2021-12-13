@@ -1,0 +1,26 @@
+<table>
+  <% if flash[:notice] %>
+     <p id="notice">
+       <%= flash[:notice] %>
+     </p>
+  <% end %>
+  <tr>
+    <th>Title:</th>
+    <td class="title"><%= @book.title %></td>
+  </tr>
+  <tr>
+    <th>Body:</th>
+    <td class="content"><%= @book.body %></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td class="button">
+      <%= link_to 'Edit',edit_book_path %>
+    </td>
+    <td>|</td>
+    <td class="button">
+      <%= link_to 'Back',books_path %>
+    </td>
+  </tr>
+</table>
